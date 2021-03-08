@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Page</title>
+  </head>
+  <body>
+    <form method="POST">
+      <fieldset>
+        <label>First name: </label> <input type="text" name="firstname"/> <br />
+        <label>Last name: </label> <input type="text" name = "lastname"/>
+        <label> Gender: </label>
+        <input type="radio" name="gender" name="gender" value="male"/> Male
+        <input type="radio" name="gender" name="gender" value="female"/> Female
+        <br />
+        <label> Country of origin</label>
+        <select name="country">
+          <option>India</option>
+          <option>Russia</option>
+          <option>US</option>
+        </select>
+        <br />
+        <label>Notes:</label>
+        <textarea cols="80" rows="18" name = "notes"></textarea>
+        <br />
+        <br />
+        <input type="submit" value="Please Register">
+      </fieldset>
+    </form>
+  </body>
+</html>
