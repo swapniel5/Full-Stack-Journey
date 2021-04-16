@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id's and Classes Demo</title>
+
+    <style>
+        #homepage-header{
+            background-color: yellow;
+        }
+        .grayed{
+        background: gray;
+        }
+        input[type=text]{
+            background-color: green;
+        }
+        input[type=password]{
+            background-color: red;
+        }
+        input[type=submit]{
+            background-color: yellow;
+        }
+    </style>
+    <!-- Attrbute Selector:  
+        input[type=text]{
+            background-color: green;-->
+</head>
+<body>
+    <header id="homepage-header">
+        <img src="http://placehold.it/280x80" alt="company logo">
+        <h1>
+            Company name
+        </h1>
+    </header>
+    <section>
+        <p class="grayed">
+            Main Contents
+        </p>
+        <p>
+            login
+        </p><form>
+            <input type="text" placeholder="username"><br>
+            <input type="password" placeholder="password">
+            <br>
+            <input type="submit" value="submit">
+        </form>
+    </section>
+    <aside>
+        SideBar
+    </aside>
+    <footer>
+        <div class="grayed">
+            Copyrights notice and other infos
+        </div>
+    </footer>
+</body>
+</html>
