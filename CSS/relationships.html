@@ -1,43 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Relationships:</title>
-</head>
-<body>
 
+    <style>
+      /* section.articles > h1 {
+        color: red;
+      }
+      section:first-child > h1{
+          color: blueviolet;
+
+      }
+      section:nth-child(2) > h1{
+          color: green;
+      }
+      h1:hover{
+          background-color: chartreuse;
+      }*/
+     /* specifiicity rull
+      article a {
+        color: green;
+      }
+      article p + a {
+        color: blue;
+      }
+      article p + a:hover {
+        color: orange;
+      }*/
+      
+    </style>
+    <!-- + sign creates a sibling relationship between two elements that are around it.
+            that means the elements on the left coms before the elements on the right but at
+            the same level in the hierarchy.
+            -->
+  </head>
+  <body>
     <div class="main-content">
-        <section class="articles">
-            <h1> Latest posts</h1>
-            <article>
-            <h1> Today's Rants</h1>
-            <p>sdbkjdndsbdsnv
-                jsnvknvvkjfv
-                vjfnvkjdfnvfnvjjvfv jn jdnvs
-                nn
-            </p>
+      <section class="articles">
+        <h1>Latest posts</h1>
+        <article>
+          <h1>Today's Rants</h1>
+          <p>
+            sdbkjdndsbdsnv jsnvknvvkjfv vjfnvkjdfnvfnvjjvfv jn jdnvs nn
+            <a href="">more</a>
+          </p>
+          <a href="">rate</a>
         </article>
         <article>
-            <h1> Yesterdays's Posts</h1>
-            <p>sdbkjdndsbdsnv
-                jsnvknvvkjfv
-                vjfnvkjdfnvfnvjjvfv jn jdnvs
-                nn
-            </p>
+          <h1>Yesterdays's Posts</h1>
+          <p>
+            sdbkjdndsbdsnv jsnvknvvkjfv vjfnvkjdfnvfnvjjvfv jn jdnvs nn
+            <a href="">more</a>
+          </p>
+          <a href="">rate</a>
         </article>
-        <article>
-            <h1> Archived's posts</h1>
-            <p>sdbkjdndsbdsnv
-                jsnvknvvkjfv
-                vjfnvkjdfnvfnvjjvfv jn jdnvs
-                nn
-            </p>
+      </section>
+      <section>
+        <h1>Archived's posts</h1>
+        <article class="archived">
+          <h1>Archived post!</h1>
+          <p>
+            sdbkjdndsbdsnv jsnvknvvkjfv vjfnvkjdfnvfnvjjvfv jn jdnvs nn
+            <a href="">more</a>
+          </p>
+          <a href="">rate</a>
         </article>
-        </section>
-
+      </section>
     </div>
-    
-</body>
+  </body>
 </html>
