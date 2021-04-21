@@ -1,7 +1,19 @@
+<!DOCTYPE html>
 <html>
-<body>
-    <h1>Hello There.!</h1>
-</body>
+  <body>
+    <h2>JavaScript Functions</h2>
+    <p> enter data below to convert farenheit temprature to celcius </p>
+    Name: <input type="text" id="myText" value="100" />
 
-<script src="index.js"></script>
+    <button onclick="toCelsius()">Try it</button>
+    <p> celcius Temp: </p>
+    <p id="demo"></p>
+    <script>
+      function toCelsius() {
+        var x = document.getElementById("myText").value;
+      console.log(x);
+      document.getElementById("demo").innerHTML = (5 / 9) * (x - 32);;
+      }
+    </script>
+  </body>
 </html>
