@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Objects</h2>
+
+    <p id="string"></p>
+    <p id="length"></p>
+    <p id="toUpperCase"></p>
+    <p id="charAt"></p>
+    <script>
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+
+      Person.prototype.nationality = "English";
+
+      var myFather = new Person("John", "Doe", 50, "blue");
+      document.getElementById("string").innerHTML =
+        "Your string:  " + myFather.nationality;
+      document.getElementById("length").innerHTML =
+        "length of string:  " + myFather.nationality.length;
+      document.getElementById("toUpperCase").innerHTML =
+        "uppercase of string:  " + myFather.nationality.toUpperCase();
+      document.getElementById("charAt").innerHTML =
+        "charAt(1) of string:  " + myFather.nationality.charAt(1);
+    </script>
+  </body>
+</html>

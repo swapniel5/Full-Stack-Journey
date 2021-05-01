@@ -1,0 +1,92 @@
+<!-- 
+    A Callback is a function when provided as an 
+    argument to another function call
+
+    A callback is a function passed as an argument to another function.
+
+Using a callback, you could call the calculator function (myCalculator) with a callback, and let the calculator function run the callback after the calculation is finished:
+
+************************
+Example
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator(5, 5, myDisplayer);
+
+********************
+
+In the example above, myDisplayer is the name of a function.
+
+It is passed to myCalculator() as an argument.
+
+When you pass a function as an argument, remember not to use parenthesis.
+
+Right: myCalculator(5, 5, myDisplayer);
+
+Wrong: myCalculator(5, 5, myDisplayer());
+
+When to Use a Callback?
+The examples above are not very exciting.
+
+They are simplified to teach you the callback syntax.
+
+Where callbacks really shine are in asynchronous functions, where one function has to wait for another function (like waiting for a file to load).
+
+
+
+-->
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Objects</h2>
+
+    <p id="addition"></p>
+    <p id="subtractin"></p>
+    <p id="multiply"></p>
+    <p id="division"></p>
+
+    <script>
+      function add(num1, num2) {
+        var result;
+        result = num1 + num2;
+        return result;
+      }
+      function sub(num1, num2) {
+        var result;
+        result = num1 - num2;
+        return result;
+      }
+      function multiply(num1, num2) {
+        var result;
+        result = num1 * num2;
+        return result;
+      }
+      function div(num1, num2) {
+        var result;
+        result = num1 / num2;
+        return result;
+      }
+
+      function calculate(num1, num2, operation) {
+        var result;
+
+        result = operation(num1, num2);
+        return result;
+      }
+      document.getElementById("addition").innerHTML =
+        "addition:  " + calculate(10, 20, add);
+      document.getElementById("subtractin").innerHTML =
+        "subtraction:  " + calculate(10, 20, sub);
+      document.getElementById("multiply").innerHTML =
+        "multiply:  " + calculate(10, 20, multiply);
+      document.getElementById("division").innerHTML =
+        "divison:  " + calculate(10, 20, div);
+    </script>
+  </body>
+</html>

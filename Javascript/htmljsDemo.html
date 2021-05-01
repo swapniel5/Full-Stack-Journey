@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html JS Demo</title>
+  </head>
+  <body>
+    <div id="jsContent"></div>
+  </body>
+
+  <script>
+    var technologies = ["HTML", "CSS", "JS", "DOM"];
+
+    function createMenu(items) {
+      var menu = document.createElement("ul");
+      //iterate over the itens and create one li for each items
+      items.forEach(function (element, index, array) {
+        var menuItems = document.createElement("li");
+        var textNode = document.createTextNode(element);
+        menuItems.appendChild(textNode);
+        menu.appendChild(menuItems);
+      });
+      console.log(menu);
+      document.getElementById("jsContent").append(menu);
+    }
+    createMenu(technologies);
+  </script>
+</html>

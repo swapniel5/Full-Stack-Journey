@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Arrays</h2>
+
+    <p id="array1"></p>
+    <p id="array2"></p>
+    <p id="implicit-iteration"></p>
+    <p id="division"></p>
+
+    <script>
+        var myArray = [];
+        var webCategories = [
+          "front End Devloper",
+          "Backend Dev",
+          "Full stack Dev",
+        ];
+        var mixedArrray = [10, "Iam a String", true];
+      function arrays() {
+        myArray[4] = "fourth";
+        return mixedArrray;
+      }
+
+      function concatArray(){
+          return webCategories.concat(mixedArrray);
+      }
+
+
+      /*********** implicit iteration*************/
+
+      var upperCasedcategories = [];
+
+      function uppercaseElement(element, index, array){
+          upperCasedcategories.push(element.toUpperCase());
+      }
+      webCategories.forEach(uppercaseElement)
+    console.log(upperCasedcategories);
+      document.getElementById("array1").innerHTML = "Array:  " + arrays();
+      document.getElementById("array2").innerHTML = "Array1 :"+webCategories+ " <br>Array2 :"+mixedArrray+" <br>concatArray:  " + concatArray();
+      document.getElementById("implicit-iteration").innerHTML = "implicit-iteration:  " + upperCasedcategories;
+
+</script>
+  </body>
+</html>

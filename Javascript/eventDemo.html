@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Demo</title>
+    <style>
+      body,
+      * {
+        font-family: "Arial", sans-serif;
+        box-sizing: border-box;
+      }
+      .menu {
+        background-color: #666;
+        list-style: none;
+        margin: 0;
+        position: relative;
+      }
+      .menu-item {
+        float: left;
+      }
+
+      .menu-item a {
+        color: #eee;
+        display: block;
+        text-decoration: none;
+        padding: 1em;
+      }
+
+      .menu-item a:hover {
+        color: #333;
+        background-color: #fff;
+      }
+      .menu-item-info {
+        display: none;
+        position: absolute;
+        left: 0;
+        border: 1px solid #ddd;
+        border-top: none;
+        width: 100%;
+        background-color: #fff;
+        padding: 0.3em;
+        color: #333;
+      }
+
+      .cf {
+        clear: both;
+      }
+
+      .is-visible {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="main-menu" class="menu">
+      <li class="menu-item">
+        <a href="#">Home</a>
+        <div class="menu-item-info">This is the Home menu</div>
+      </li>
+      <li class="menu-item">
+        <a href="#">about us</a>
+        <div class="menu-item-info">This is the about us menu</div>
+      </li>
+      <li class="menu-item">
+        <a href="#">Contact us</a>
+        <div class="menu-item-info">This is the contact us menu</div>
+      </li>
+      <div class="cf"></div>
+    </ul>
+  </body>
+
+  <script>
+    // grab a reference to all the menu links
+    var $menuLinks = document.querySelectorAll(".menu-item > a");
+    function getInfoPanelFromElement(element) {
+      var $infoPanel = element.parentNode.querySelector(".menu-item-info");
+      return $infoPanel;
+    }
+
+    function displayInfoPanelForElement(event) {
+      var $anchor = event.target;
+      //$infoPanel = getInfoPanelFromElement($anchor);
+      ////make the panel visible
+      //NOTE:  classlist is available only on IE10+
+      getInfoPanelFromElement($anchor).classList.add("is-visible");
+    }
+
+    function hideInfoPanelForElement(event) {
+      var $anchor = event.target;
+      //$infoPanel = getInfoPanelFromElement($anchor);
+      ////make the panel visible
+      //NOTE:  classlist is available only on IE10+
+      getInfoPanelFromElement($anchor).classList.remove("is-visible");
+    }
+
+    console.log($menuLinks);
+    // iterate on the list and register a call back when the user hover on th link
+    for (var i = 0; i < $menuLinks.length; i++) {
+      //we are on each anchor element in th menu
+      //register a callback when the mouse hovre on the link
+      var $anchor = $menuLinks[i];
+      $anchor.addEventListener("mouseover", displayInfoPanelForElement);
+      $anchor.addEventListener("mouseout", hideInfoPanelForElement);
+    }
+  </script>
+</html>
