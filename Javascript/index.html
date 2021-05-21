@@ -2,18 +2,26 @@
 <html>
   <body>
     <h2>JavaScript Functions</h2>
-    <p> enter data below to convert farenheit temprature to celcius </p>
+    <p>enter data below to convert farenheit temprature to celcius</p>
     Name: <input type="text" id="myText" value="100" />
 
     <button onclick="toCelsius()">Try it</button>
-    <p> celcius Temp: </p>
+    <p>celcius Temp:</p>
     <p id="demo"></p>
     <script>
-      function toCelsius() {
-        var x = document.getElementById("myText").value;
-      console.log(x);
-      document.getElementById("demo").innerHTML = (5 / 9) * (x - 32);;
+      // function toCelsius() {
+      //   var x = document.getElementById("myText").value;
+      // console.log(x);
+      // document.getElementById("demo").innerHTML = (5 / 9) * (x - 32);;
+      // }
+      function a() {
+        var b = 10;
+        c();
+        function c() {
+          console.log(b);
+        }
       }
+      a();
     </script>
   </body>
 </html>
